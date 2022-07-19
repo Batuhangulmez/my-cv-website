@@ -19,7 +19,7 @@ const Header = ({ refClass, executeScroll }) => {
                 href="#home"
                 className="nav-link "
               >
-                <i className="bx bx-home nav-icon"></i>Home
+                <i className="bx bx-home nav-icon"></i>Profil
               </a>
             </NavItem>
             <NavItem setShowMenu={setShowMenu}>
@@ -28,7 +28,7 @@ const Header = ({ refClass, executeScroll }) => {
                 href="#about"
                 className="nav-link"
               >
-                <i className="bx bx-user nav-icon"></i>about
+                <i className="bx bx-user nav-icon"></i>Hakkımda
               </a>
             </NavItem>
             <NavItem setShowMenu={setShowMenu}>
@@ -37,7 +37,7 @@ const Header = ({ refClass, executeScroll }) => {
                 href="#experience"
                 className="nav-link"
               >
-                <i className="bx bx-envelope nav-icon"></i>Contact
+                <i className="bx bx-envelope nav-icon"></i>İletişim
               </a>
             </NavItem>
             <NavItem setShowMenu={setShowMenu}>
@@ -46,7 +46,7 @@ const Header = ({ refClass, executeScroll }) => {
                 href="#education"
                 className="nav-link"
               >
-                <i className="bx bx-book nav-icon"></i>Education
+                <i className="bx bx-book nav-icon"></i>Eğitim
               </a>
             </NavItem>
             <NavItem setShowMenu={setShowMenu}>
@@ -55,7 +55,7 @@ const Header = ({ refClass, executeScroll }) => {
                 href="#skills"
                 className="nav-link"
               >
-                <i className="bx bx-receipt nav-icon"></i>Skills
+                <i className="bx bx-receipt nav-icon"></i>Beceriler
               </a>
             </NavItem>
             <NavItem setShowMenu={setShowMenu}>
@@ -64,7 +64,7 @@ const Header = ({ refClass, executeScroll }) => {
                 href="#experience"
                 className="nav-link"
               >
-                <i className="bx bx-briefcase-alt nav-icon"></i>Experience
+                <i className="bx bx-briefcase-alt nav-icon"></i>Deneyim
               </a>
             </NavItem>
           </ul>
