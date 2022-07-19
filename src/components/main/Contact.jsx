@@ -1,4 +1,5 @@
 import React from "react";
+import clickIcon from "../../assets/icon/click.png";
 
 const Contact = ({ contactRef }) => {
   return (
@@ -26,7 +27,19 @@ const Contact = ({ contactRef }) => {
         </div>
         <div className="contact-content">
           <div className="contact-data bd-grid">
-            <h3 className="contact-title">LinkedIn / GitHub</h3>
+            <h3 className="contact-title  ">
+              <a
+                href="https://www.linkedin.com/in/batuhangülmez"
+                target="_blank"
+              >
+                LinkedIn
+              </a>{" "}
+              /{" "}
+              <a href="https://github.com/Batuhangulmez" target="_blank">
+                GitHub
+              </a>
+              <img className="clickIcon" src={clickIcon} />
+            </h3>
           </div>
         </div>
       </div>
