@@ -108,6 +108,7 @@ img {
 }
 
 .a-side::after {
+  visibility: hidden;
   content: "";
   position: absolute;
   width: 10px;
@@ -120,6 +121,7 @@ img {
 }
 
 .a-side::before {
+  visibility: hidden;
   content: "";
   position: absolute;
   width: 10px;
@@ -479,5 +481,13 @@ header {
   .profileImg {
     display: flex;
     justify-content: right;
+  }
+
+  .a-side::after {
+    visibility: visible;
+  }
+
+  .a-side::before {
+    visibility: visible;
   }
 }
