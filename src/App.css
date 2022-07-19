@@ -5,16 +5,17 @@
   --header-height: 3rem;
 
   /* Colors */
-  --title-color: #0b0a0a;
-  --text-color: #403a3a;
+  --title-color: #363636;
+  --text-color: #555555;
   --text-color-light: #707070;
+  --modifier-color: #ffcc01;
   --container-color: #fafafa;
   --container-color-alt: #f0efef;
   --body-color: #fcfcfc;
 
   /* Typography  */
   --body-font: "Poppins", sans-serif;
-  --h1-font-size: 2rem;
+  --h1-font-size: 4rem;
   --h2-font-size: 1.5rem;
   --h3-font-size: 1rem;
   --normal-font-size: 0.938rem;
@@ -93,10 +94,12 @@ img {
   position: absolute;
   width: 60px;
   height: 3px;
-  transform: translate(-100%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
+
   top: calc(var(--h2-font-size) + var(--h2-font-size));
   text-align: center;
-  background: gray;
+  background: var(--modifier-color);
 }
 
 /* Layout */
@@ -196,32 +199,6 @@ header {
 
 /* Educations */
 
-.education-content {
-  display: flex;
-}
-
-.education-time {
-  padding-right: 1rem;
-}
-
-.education-rounder {
-  position: relative;
-  display: block;
-  width: 16px;
-  height: 16px;
-  background-color: var(--text-color-light);
-  border-radius: 50%;
-  margin-top: 0.25rem;
-}
-
-.education-line {
-  display: block;
-  width: 2px;
-  height: 110%;
-  background-color: var(--text-color-light);
-  transform: translate(7px, 0);
-}
-
 .education-data {
   gap: 0.5rem;
 }
@@ -254,8 +231,9 @@ header {
   color: var(--title-color);
 }
 
-/* Profile */
-.profile-description {
+/* about */
+.about-description {
+  min-height: 82px;
   text-align: center;
 }
 
@@ -274,16 +252,15 @@ header {
   display: block;
   width: 16px;
   height: 16px;
-  background-color: var(--text-color-light);
+  background-color: var(--modifier-color);
   border-radius: 50%;
-  margin-top: 0.25rem;
 }
 
 .experience-line {
   display: block;
   width: 2px;
   height: 110%;
-  background-color: var(--text-color-light);
+  background-color: var(--modifier-color);
   transform: translate(7px, 0);
 }
 
@@ -334,9 +311,52 @@ header {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-color: var(--text-color);
+  background-color: var(--modifier-color);
   border-radius: 50%;
   margin-right: 0.75rem;
+}
+
+/* Profile */
+
+.profileImg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profileImg-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: var(--text-color) solid 3px;
+}
+
+.profileTitle {
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  min-height: 228px;
+}
+
+.profileTitle-title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  max-width: min-content;
+  line-height: calc(var(--h1-font-size) - 0.3rem);
+}
+
+.profileTitle-field {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semi-bolder);
+  color: var(--title-color);
+  background-color: var(--modifier-color);
+}
+
+.profileImg .profileTitle-container {
+  visibility: visible;
 }
 
 /*  media */
@@ -374,13 +394,54 @@ header {
   }
 
   .section-title,
-  .profile-description,
+  .about-description,
   .experience-description {
     text-align: initial;
+  }
+
+  .a-side .section-title {
+    text-align: right;
+  }
+
+  .a-side .section-title::after {
+    right: auto;
+    transform: translate(-100%, -50%);
+  }
+
+  .b-side .section-title {
+    text-align: left;
+  }
+  .b-side .section-title::after {
+    right: auto;
+    left: 0;
+    transform: translate(0, -50%);
   }
 
   .skills-content {
     grid-template-columns: repeat(3, max-content);
     column-gap: 3.5rem;
+  }
+
+  .education-content {
+    text-align: right;
+  }
+
+  .contact-content {
+    text-align: right;
+  }
+
+  .profileImg .profileTitle-container {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .profileTitle {
+    visibility: visible;
+    position: static;
+  }
+
+  .profileImg {
+    display: flex;
+    justify-content: right;
   }
 }

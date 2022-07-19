@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import NavItem from "./NavItem";
 
-const Header = ({ myRef, executeScroll }) => {
+const Header = ({ refClass, executeScroll }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const refClickEvent = (refItem) =>
@@ -14,22 +14,26 @@ const Header = ({ myRef, executeScroll }) => {
         <div className={showMenu === false ? "nav-menu" : "nav-menu show-menu"}>
           <ul className="nav-list">
             <NavItem setShowMenu={setShowMenu}>
-              <a href="#home" className="nav-link ">
+              <a
+                onClick={() => refClickEvent(refClass.profileRef)}
+                href="#home"
+                className="nav-link "
+              >
                 <i className="bx bx-home nav-icon"></i>Home
               </a>
             </NavItem>
             <NavItem setShowMenu={setShowMenu}>
               <a
-                onClick={() => refClickEvent(myRef.profileRef)}
-                href="#profile"
+                onClick={() => refClickEvent(refClass.aboutRef)}
+                href="#about"
                 className="nav-link"
               >
-                <i className="bx bx-user nav-icon"></i>Profile
+                <i className="bx bx-user nav-icon"></i>about
               </a>
             </NavItem>
             <NavItem setShowMenu={setShowMenu}>
               <a
-                onClick={() => refClickEvent(myRef.contactRef)}
+                onClick={() => refClickEvent(refClass.contactRef)}
                 href="#experience"
                 className="nav-link"
               >
@@ -38,7 +42,7 @@ const Header = ({ myRef, executeScroll }) => {
             </NavItem>
             <NavItem setShowMenu={setShowMenu}>
               <a
-                onClick={() => refClickEvent(myRef.educationRef)}
+                onClick={() => refClickEvent(refClass.educationRef)}
                 href="#education"
                 className="nav-link"
               >
@@ -47,7 +51,7 @@ const Header = ({ myRef, executeScroll }) => {
             </NavItem>
             <NavItem setShowMenu={setShowMenu}>
               <a
-                onClick={() => refClickEvent(myRef.skillsRef)}
+                onClick={() => refClickEvent(refClass.skillsRef)}
                 href="#skills"
                 className="nav-link"
               >
@@ -56,7 +60,7 @@ const Header = ({ myRef, executeScroll }) => {
             </NavItem>
             <NavItem setShowMenu={setShowMenu}>
               <a
-                onClick={() => refClickEvent(myRef.experienceRef)}
+                onClick={() => refClickEvent(refClass.experienceRef)}
                 href="#experience"
                 className="nav-link"
               >
