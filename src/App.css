@@ -32,6 +32,7 @@
   --mb-2: 1rem;
   --mb-3: 1.5rem;
   --mb-4: 2rem;
+  --side-rem: 1.5rem;
 
   /* z index */
   --z-tooltip: 10;
@@ -99,6 +100,34 @@ img {
 
   top: calc(var(--h2-font-size) + var(--h2-font-size));
   text-align: center;
+  background: var(--modifier-color);
+}
+
+.a-side {
+  position: relative;
+}
+
+.a-side::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  bottom: 0;
+  right: 0;
+  transform: translate(calc(100% - var(--side-rem) - 10px), 0);
+
+  background: var(--modifier-color);
+}
+
+.a-side::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  top: 0;
+  right: 0;
+  transform: translate(calc(100% - var(--side-rem) - 10px), 0);
+
   background: var(--modifier-color);
 }
 
@@ -397,7 +426,7 @@ header {
 
   .a-side,
   .b-side {
-    padding: 0 1.5rem;
+    padding: 0 var(--side-rem);
   }
 
   .section-title,
