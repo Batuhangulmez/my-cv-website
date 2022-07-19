@@ -1,8 +1,8 @@
 import React from "react";
 
-const NavItem = ({ setShowMenu, children }) => {
+const NavItem = ({ onClick, setShowMenu, children }) => {
   return (
-    <li onClick={() => setShowMenu(false)} className="nav-item">
+    <li onClick={(() => setShowMenu(false), onClick)} className="nav-item">
       {children}
     </li>
   );

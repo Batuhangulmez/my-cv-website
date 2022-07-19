@@ -1,8 +1,8 @@
 import React from "react";
 
-const Profile = () => {
+const Profile = ({ profileRef }) => {
   return (
-    <section className="profile section">
+    <section ref={profileRef} className="profile section">
       <h2 className="section-title">HAKIMDA</h2>
       <p className="profile-description">
         React ile Web uygulamaları tasarlayıp geliştiriyorum. Yazdığım kodların

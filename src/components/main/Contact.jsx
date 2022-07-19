@@ -1,8 +1,8 @@
 import React from "react";
 
-const Contact = ({ myRef, eS }) => {
+const Contact = ({ contactRef }) => {
   return (
-    <section ref={myRef} className="contact section">
+    <section ref={contactRef} className="contact section">
       <h2 className="section-title">İLETİŞİM</h2>
       <div className="contact-container bd-grid">
         <div className="contact-content">
@@ -24,7 +24,7 @@ const Contact = ({ myRef, eS }) => {
             <span className="contact-studies">Avcılar / İstanbul</span>
           </div>
         </div>
-        <div onClick={eS} className="contact-content">
+        <div className="contact-content">
           <div className="contact-data bd-grid">
             <h3 className="contact-title">LinkedIn / GitHub</h3>
           </div>

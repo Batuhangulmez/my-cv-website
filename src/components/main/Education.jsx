@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 
-const Education = ({ myRef, eS }) => {
+const Education = ({ educationRef }) => {
   return (
-    <section ref={myRef} className="education section">
+    <section ref={educationRef} className="education section">
       <h2 className="section-title">EĞİTİM</h2>
       <div className="education-container bd-grid">
         <div className="education-content">

@@ -1,8 +1,8 @@
 import React from "react";
 
-const Skills = () => {
+const Skills = ({ skillsRef }) => {
   return (
-    <section className="skills section">
+    <section ref={skillsRef} className="skills section">
       <h2 className="section-title">BECERİLER</h2>
       <div className="skills-content bd-grid">
         <ul className="skills-data">

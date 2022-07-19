@@ -1,27 +1,25 @@
-import React, { useRef } from "react";
+import React from "react";
 import Contact from "./Contact";
 import Education from "./Education";
 import Experience from "./Experience";
 import Profile from "./Profile";
 import Skills from "./Skills";
 
-const Main = () => {
-  const myRef = useRef(null);
-  const eS = () => myRef.current.scrollIntoView();
+const Main = ({ refClass }) => {
   return (
     <main className="l-main bd-container">
       <div className="side">
         <div className="a-side">
-          <Education myRef={myRef} eS={eS} />
+          <Education educationRef={refClass.educationRef} />
 
-          <Contact myRef={myRef} eS={eS} />
+          <Contact contactRef={refClass.contactRef} />
         </div>
         <div className="b-side">
-          <Profile />
+          <Profile profileRef={refClass.profileRef} />
 
-          <Experience myRef={myRef} eS={eS} />
+          <Experience experienceRef={refClass.experienceRef} />
 
-          <Skills />
+          <Skills skillsRef={refClass.skillsRef} />
         </div>
       </div>
     </main>
